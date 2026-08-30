@@ -23,8 +23,8 @@
 - Registro
 - Página de Remeras
 - Página de Pantalones
-- Página de Calzado
-- Página de Camperas
+- Página de Sweaters
+- Página de Jeans
 
 ## Tecnologías utilizadas
 
