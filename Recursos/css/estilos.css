@@ -1,0 +1,249 @@
+:root {
+    --color-principal: #111111;
+    --color-secundario: #d4af37;
+    --color-fondo: #f2f2f2;
+    --color-texto: #222222;
+    --color-blanco: #ffffff;
+
+    --fuente-principal: Arial, sans-serif;
+}
+
+/*ESTILOS GENERALES*/
+
+body {
+    margin:0;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* NAVBAR */
+nav{
+    background-color: var(--color-principal);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: var(--color-secundario);
+     transform: scale(1.05);
+}
+
+nav a:first-child {
+    font-size: 22px;
+    margin-right: auto;
+}
+
+
+/* TITULO PRINCIPAL */
+
+h1 {
+    text-align: center ;
+    margin-top: 60px;
+    font-size: 40px;
+    color: var(--fuente-principal);
+}
+
+/*SECCION BIENVENIDA */
+.bienvenida {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    text-align: center;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+}
+
+.bienvenida h2{
+    color: var(--color-secundario);
+    font-size:  28px;
+}
+
+.bienvenida p{
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/*PRODUCTOS */
+.productos{
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.productos h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.tarjeta-producto {
+    width: 300px;
+    margin: 20px;
+    padding-bottom: 20px;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+}
+
+.imagen-producto{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-fondo);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.tarjeta-producto h3{
+    font-size: 22px;
+    margin: 15px 20px 8px;
+}
+
+.precio{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+.tarjeta-producto button{
+    padding:  10px 20px;
+    border: none;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    cursor: pointer;
+}
+
+.tarjeta-producto button:hover{
+    background-color: var(--color-secundario);
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.20);
+}
+
+.tarjeta-producto > p {
+    margin: 0 20px 10px;
+    font-size: 16px;
+}
+
+.lista-productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/*LOGIN */
+
+form {
+    width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: var(--color-secundario);
+}
+
+form p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form p a {
+    color: var(--color-secundario);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
+form input[type="date"] {
+    font-family: inherit;
+}
+
+form button:hover {
+    background-color: var(--color-secundario);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+
+  .lista-productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta-producto {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    nav {
+    flex-direction: column;
+    gap: 10px;
+}
+
+form {
+    width: 90%;
+    box-sizing: border-box;
+}
+}
+
