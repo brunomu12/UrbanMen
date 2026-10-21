@@ -134,25 +134,29 @@ h1 {
 
 .imagen-producto img {
     width: 100%;
-    height: 250px;
+    height: 220px;
     object-fit: contain;
     
 }
 
 .tarjeta-producto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.20);
-}
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+    }
 
 .tarjeta-producto > p {
     margin: 0 20px 10px;
     font-size: 16px;
 }
 
-.lista-productos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+#lista-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px;
 }
 
 /*LOGIN */
@@ -245,5 +249,59 @@ form {
     width: 90%;
     box-sizing: border-box;
 }
+}
+
+/* Contenedor de los botones de cantidad */
+.cantidad-producto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+/* Botones de aumentar y disminuir */
+.cantidad-producto button {
+    background-color: #212529;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 6px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.cantidad-producto button:hover {
+    background-color: #495057;
+}
+
+/* Número de unidades */
+.cantidad-producto span {
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Botón Agregar al carrito */
+.tarjeta-producto > button {
+    background-color: #198754;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+/* Efecto al pasar el mouse */
+.tarjeta-producto > button:hover {
+    background-color: #146c43;
 }
 
