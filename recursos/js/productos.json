@@ -1,0 +1,72 @@
+[
+    {
+        "nombre": "Remera básica azul",
+        "descripcion": "Remera básica de algodón",
+        "precio": 15000,
+        "imagen": "recursos/imagenes/remeraAzul.webp",
+        "categoria": "remera"
+    },
+    {
+        "nombre": "Remera básica negra",
+        "descripcion": "Remera básica de algodón",
+        "precio": 17000,
+        "imagen": "recursos/imagenes/remeraNegra.webp",
+        "categoria": "remera"
+    },
+    {
+        "nombre": "Remera básica verde",
+        "descripcion": "Remera básica de algodón",
+        "precio": 13000,
+        "imagen": "recursos/imagenes/remeraVerde.webp",
+        "categoria": "remera"
+    },
+    {
+        "nombre": "Sweater clásico",
+        "descripcion": "Sweater clásico de algodón",
+        "precio": 25000,
+        "imagen": "recursos/imagenes/sweaterAzul.webp",
+        "categoria": "sweater"
+    },
+    {
+        "nombre": "Sweater beige",
+        "descripcion": "Sweater clásico de algodón",
+        "precio": 28000,
+        "imagen": "recursos/imagenes/sweaterBeige.webp",
+        "categoria": "sweater"
+    },
+    {
+        "nombre": "Sweater verde",
+        "descripcion": "Sweater clásico de algodón",
+        "precio": 19000,
+        "imagen": "recursos/imagenes/sweaterVerde.webp",
+        "categoria": "sweater"
+    },
+    {
+        "nombre": "Campera cuello alto",
+        "descripcion": "Campera con cuello alto",
+        "precio": 35000,
+        "imagen": "recursos/imagenes/camperaAlto.webp",
+        "categoria": "campera"
+    },
+    {
+        "nombre": "Campera Puffer",
+        "descripcion": "Campera negra inflable",
+        "precio": 45000,
+        "imagen": "recursos/imagenes/camperaPuffer.webp",
+        "categoria": "campera"
+    },
+    {
+        "nombre": "Jean Mom",
+        "descripcion": "Jean Mom, 38 al 46",
+        "precio": 36000,
+        "imagen": "recursos/imagenes/jeanMom.webp",
+        "categoria": "jean"
+    },
+    {
+        "nombre": "Jean Skynni",
+        "descripcion": "Jean Skynni, 40 al 46",
+        "precio": 36000,
+        "imagen": "recursos/imagenes/jeanSkynni.webp",
+        "categoria": "jean"
+    }
+]

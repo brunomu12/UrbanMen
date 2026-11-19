@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultá los productos que agregaste a tu carrito en Urban Men.">
+    <meta name="author" content="Urban Men">
+
+    <title>Urban Men - Carrito</title>
+
+    <!-- Archivo CSS -->
+    <link rel="stylesheet" href="../recursos/css/estilos.css">
+</head>
+<body>
+
+    <div id="navbar"></div>
+
+    <h1>Mi carrito</h1>
+
+    <section class="productos">
+        <h2>Productos seleccionados</h2>
+
+        <div id="lista-carrito">
+        </div>
+    </section>
+
+    <!-- Archivos JavaScript -->
+    <script src="../recursos/js/navbar.js"></script>
+    <script src="../recursos/js/carrito.js"></script>
+    <script src="../recursos/js/proteccion.js"></script>
+
+    <script>
+        verificarSesion();
+        crearNavbar();
+        mostrarCarrito();
+
+    </script>
+
+</body>
+</html>

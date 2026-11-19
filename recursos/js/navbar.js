@@ -1,5 +1,4 @@
 const paginas = [
-    { titulo: "Home", direccion: "index.html" },
     { titulo: "Remeras", direccion: "remeras.html" },
     { titulo: "Sweaters", direccion: "sweaters.html" },
     { titulo: "Camperas", direccion: "camperas.html" },
@@ -7,6 +6,8 @@ const paginas = [
 ];
 
 function cerrarSesion() {
+    sessionStorage.removeItem("usuario");
+
     if (window.location.pathname.includes("/pages/")) {
         window.location.href = "login.html";
     } else {
@@ -25,19 +26,17 @@ function crearNavbar() {
         ? ""
         : "pages/";
 
+    const rutaCarrito = dentroDePages
+        ? "carrito.html"
+        : "pages/carrito.html";
+
     let contenido = `
         <nav>
             <a href="${rutaInicio}">👕 Urban Men</a>
     `;
 
     for (let i = 0; i < paginas.length; i++) {
-        let direccion;
-
-        if (paginas[i].direccion === "index.html") {
-            direccion = rutaInicio;
-        } else {
-            direccion = rutaPages + paginas[i].direccion;
-        }
+        let direccion = rutaPages + paginas[i].direccion;
 
         contenido += `
             <a href="${direccion}">
@@ -45,13 +44,14 @@ function crearNavbar() {
             </a>
         `;
     }
-    contenido += `
-    <a href="#" onclick="cerrarSesion(); return false;">
-        Cerrar sesión
-    </a>
-    </nav>
 
-   
+    contenido += `
+        <a href="${rutaCarrito}">🛒 Carrito</a>
+
+        <a href="#" onclick="cerrarSesion(); return false;">
+            Cerrar sesión
+        </a>
+        </nav>
     `;
 
     document.getElementById("navbar").innerHTML = contenido;

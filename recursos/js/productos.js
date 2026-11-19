@@ -162,15 +162,34 @@ function agregarAlCarrito(i) {
     );
 
     const productosMostrar = obtenerProductosDeLaPagina();
+    const productoSeleccionado = productosMostrar[i];
 
     if (cantidad > 0) {
-        alert(
-            "Agregaste " + cantidad + " unidad(es) de " +
-            productosMostrar[i].nombre + " al carrito."
-        );
+
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        const productoExistente = carrito.find(function(producto) {
+            return producto.nombre === productoSeleccionado.nombre;
+        });
+
+        if (productoExistente) {
+            productoExistente.cantidad += cantidad;
+        } else {
+            carrito.push({
+                nombre: productoSeleccionado.nombre,
+                descripcion: productoSeleccionado.descripcion,
+                precio: productoSeleccionado.precio,
+                imagen: productoSeleccionado.imagen,
+                cantidad: cantidad
+            });
+        }
+
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+
+        alert("Producto agregado al carrito.");
+
     } else {
         alert("Seleccioná al menos una unidad.");
     }
 }
-
 mostrarProductos();
